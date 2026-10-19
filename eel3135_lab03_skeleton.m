@@ -336,7 +336,7 @@ zaa = zeros(size(z,1), size(z,2));
     for nn = 1:size(z,1)
         for mm = 1:size(z,2)
             x_minus = max(nn-1, 1); %if nn-1 < 1, matlab will throw error so use 1 if it is <1      
-            x_plus  = min(nn+1, size(z,1)); %same for if it is greater than size (stack smashing?)
+            x_plus  = min(nn+1, size(z,1)); %same for if it is greater than size
             y_minus = max(mm-1, 1);      
             y_plus  = min(mm+1, size(z,2)); 
             %mm = y, nn = x
